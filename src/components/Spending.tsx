@@ -9,7 +9,14 @@ const Spending = () => {
     { day: "sun", amount: 45, color: "hsl(10, 79%, 65%)" },
   ];
 
-  function bars({ day, amount, color }) {
+  interface Week {
+    day: string;
+    amount: number;
+    color: string;
+  }
+
+  function bars(week: Week) {
+    const { day, amount, color } = week;
     return (
       <div className="bar" key={day}>
         <div
