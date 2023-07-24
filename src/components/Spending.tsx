@@ -21,7 +21,11 @@ const Spending = () => {
       <div className="bar" key={day}>
         <div
           className="imBar"
-          style={{ height: `${amount}px`, backgroundColor: `${color}` }}
+          style={{
+            height: `${amount}px`,
+            backgroundColor: `${color}`,
+            width: "30px",
+          }}
         ></div>
         <p>{day}</p>
       </div>
