@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+$background: hsl(27, 66%, 92%);
+$soft-red: hsl(10, 79%, 65%);
+$cyan: hsl(186, 34%, 60%);
+$dark-brown: hsl(25, 47%, 15%);
+$medium-brown: hsl(28, 10%, 53%);
+$pale-purple:hsl(33, 100%, 98%);
+$max-width: 400px;
+$max-height: 500px;
+
+$font-size: 18px;
+$font-family: 'DM Sans', sans-serif;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+}
+body{
+    background-color: $background;
+}
+
+#root{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: $max-width;
+    max-height: $max-height;
+    overflow: hidden;
+    margin: auto;
+}
+
+.balance{
+    width: 100%;
+    margin: 2rem auto;
+    background-color: $soft-red;
+    border-radius: 12px;
+    color: white;
+    padding: 1.5rem 0;
+    
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+
+        .amount{
+            font-weight: 700;
+        }
+
+        .myBalance{
+            font-size: smaller;
+            line-height: 2rem;
+        }
+    }
+    .icon{
+        display: flex;
+        align-items: center;
+
+        .circle{
+            position: relative;
+            left: 25%;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            border: 1px solid white;
+        }
+        .circle2{
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background-color: black;
+        }
+    }
+}
+
+//Spending
+
+.spending{
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+
+    .graph{
+        display:flex;
+        gap: 1rem;
+        height: max-content;
+    }
+
+    .bar{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: end;
+
+        p{
+            color: #746f6f;
+            font-size: smaller;
+            text-align: center;
+        }
+
+        .imBar{
+            background-color: $dark-brown;
+            border-radius:2px;
+            font-size: smaller;
+        }
+    }
+    .divider{
+        width: 100%;
+        height: 1px;
+        background-color: #e3dada;
+        margin: 1rem 0;
+    }
+    .header{
+        font-size: large;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+    .total{
+        font-size: smaller;
+        color: #746f6f;
+    }
+    .summary{
+        display: flex;
+        justify-content: space-between;
+
+        .amt{
+            line-height: 2rem;
+        }
+        .change{
+            font-size: smaller;
+
+            p{
+                text-align: right;
+                font-weight: 700;
+            }
+
+            .text{
+                font-weight: 400;
+                color: #746f6f;
+            }
+        }
+    }
+}
